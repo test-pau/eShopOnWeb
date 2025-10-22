@@ -1,0 +1,116 @@
+/* Theme CSS Custom Properties */
+:root {
+    /* Light Theme (Default) */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #EEEEFF;
+    --bg-footer: #000000;
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --text-footer: #EEEEEE;
+    --border-color: #EEEEEE;
+    --link-color: #000;
+    --link-hover: #75B918;
+    --brand-color: #00A69C;
+    --secondary-color: #83D01B;
+    --card-bg: #FFFFFF;
+    --input-bg: #FFFFFF;
+    --input-border: #ccc;
+    --button-text: #FFFFFF;
+}
+
+[data-theme="dark"] {
+    /* Dark Theme */
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-footer: #0a0a0a;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-footer: #999999;
+    --border-color: #444444;
+    --link-color: #e0e0e0;
+    --link-hover: #83D01B;
+    --brand-color: #00CDB8;
+    --secondary-color: #9FE835;
+    --card-bg: #2d2d2d;
+    --input-bg: #333333;
+    --input-border: #555555;
+    --button-text: #FFFFFF;
+}
+
+/* Apply theme colors */
+html,
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.esh-app-header {
+    background-color: var(--bg-primary);
+}
+
+.esh-app-footer {
+    background-color: var(--bg-footer);
+    border-top-color: var(--border-color);
+}
+
+.esh-app-footer-text {
+    color: var(--text-footer) !important;
+}
+
+a,
+a:active,
+a:visited {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+.form-input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border-color: var(--input-border);
+}
+
+.esh-catalog-items .esh-catalog-item {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.esh-basket-items .esh-basket-item {
+    background-color: var(--card-bg);
+}
+
+.esh-orders-item {
+    background-color: var(--card-bg);
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.theme-toggle:hover {
+    background-color: var(--bg-secondary);
+    border-color: var(--brand-color);
+}
+
+.theme-toggle:focus {
+    outline: 2px solid var(--brand-color);
+    outline-offset: 2px;
+}
